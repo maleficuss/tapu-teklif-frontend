@@ -9,8 +9,7 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes,
-  base: process.env.BASE_URL,
-  mode: 'history'
+  mode: "history"
 })
 
 
@@ -28,10 +27,5 @@ router.beforeEach((to, from, next) => {
 new Vue({
   store,
   router,
-  render: h => h(Master),
-
-  deneme(){
-    console.log("fasfasf")
-  }
-
+  render: h => h(Master)
 }).$mount('#app')

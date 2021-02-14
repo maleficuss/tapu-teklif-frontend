@@ -40,7 +40,6 @@
 <script>
 
 
-import {store} from "@/store/store";
 
 export default {
   name:'login',
@@ -50,8 +49,8 @@ export default {
       loginButton:true,
       registerButton:true,
       loginError:false,
-      email:'gokhan@gmail.com',
-      password:'112233',
+      email:'',
+      password:'',
       r_email:'',
       r_password:''
     }
@@ -65,7 +64,6 @@ export default {
         password: this.password
       }).then(() => {
         this.$router.push({ name: 'home' });
-        console.log(store.state);
       }).catch(() => this.loginError = true)
       .finally(() => this.loginButton = true)
     },
